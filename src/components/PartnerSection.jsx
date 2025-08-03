@@ -120,21 +120,6 @@ const PartnerSection = () => {
               ))}
             </div>
           </div>
-
-          {/* Additional CTA */}
-          <div className="text-center">
-            <p className="text-gray-400 mb-8 text-lg">
-              Ready to transform your customer experience?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="inline-flex items-center justify-center gap-2 bg-gray-900 border-2 border-gray-800 text-gray-300 px-8 py-3 rounded-xl font-semibold hover:border-gray-700 hover:bg-gray-800 hover:text-white transition-all duration-200">
-                Schedule a Demo
-              </button>
-              <button className="inline-flex items-center justify-center gap-2 text-gray-400 hover:text-gray-300 px-8 py-3 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-200">
-                Contact Sales
-              </button>
-            </div>
-          </div>
         </div>
       </div>
       {/* Smooth transition to light section below */}

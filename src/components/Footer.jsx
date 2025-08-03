@@ -1,39 +1,58 @@
-import React from 'react';
-import { Instagram, Linkedin, Mail } from 'lucide-react';
+import React from "react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
+
+// Кастомная иконка X
+const XIcon = ({ size = 18 }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    stroke="none"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     {
-      name: 'Instagram',
+      name: "Instagram",
       icon: Instagram,
-      href: '#',
-      label: 'Follow us on Instagram'
+      href: "https://www.instagram.com/chester.frontline?igsh=YWdid201b3I0Y3ph",
+      label: "Follow us on Instagram",
     },
     {
-      name: 'LinkedIn',
+      name: "X",
+      icon: XIcon,
+      href: "https://x.com/ch_frontline?s=21",
+      label: "Follow us on X",
+    },
+    {
+      name: "LinkedIn",
       icon: Linkedin,
-      href: '#',
-      label: 'Connect with us on LinkedIn'
-    }
+      href: "https://www.linkedin.com/in/chester-frontline-6a70b4348/",
+      label: "Connect with us on LinkedIn",
+    },
   ];
 
   const contactEmails = [
     {
-      label: 'General Inquiries',
-      email: 'info@chesterfrontline.com'
+      label: "General Inquiries",
+      email: "info@chesterfrontline.com",
     },
     {
-      label: 'Support',
-      email: 'support@chesterfrontline.com'
-    }
+      label: "Support",
+      email: "support@chesterfrontline.com",
+    },
   ];
 
   const footerLinks = [
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
-    { name: 'Contact', href: '#' }
+    { name: "Privacy", href: "#" },
+    { name: "Terms", href: "#" },
+    { name: "Contact", href: "#" },
   ];
 
   return (
@@ -47,7 +66,7 @@ const Footer = () => {
             <div className="space-y-2">
               {contactEmails.map((contact, index) => (
                 <div key={index}>
-                  <a 
+                  <a
                     href={`mailto:${contact.email}`}
                     className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
                   >
@@ -58,10 +77,12 @@ const Footer = () => {
             </div>
 
             {/* Logo */}
-            <div className="flex items-center gap-3 pt-4">
-              <div className="w-10 h-10 bg-gray-900 rounded-lg flex items-center justify-center">
-                <div className="w-5 h-5 bg-white rounded-sm"></div>
-              </div>
+            <div className="flex items-center gap-3">
+              <img 
+                src="https://cdn.prod.website-files.com/67fa38ea4d1466d740505645/67fc93edd95521ad2723f514_NO%20BG.png"
+                alt="Chester Frontline Logo"
+                className="w-30 h-30 object-contain"
+              />
               <span className="text-xl font-bold text-gray-900 tracking-tight">
                 CHESTER FRONTLINE
               </span>
@@ -72,16 +93,20 @@ const Footer = () => {
           <div className="flex flex-col items-start lg:items-end gap-4">
             {/* Social Media */}
             <div className="flex items-center gap-6">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
-                  aria-label={social.label}
-                >
-                  <span className="font-medium text-sm">{social.name}</span>
-                </a>
-              ))}
+              {socialLinks.map((social, index) => {
+                const IconComponent = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                    aria-label={social.label}
+                  >
+                    <IconComponent size={18} />
+                    <span className="font-medium text-sm">{social.name}</span>
+                  </a>
+                );
+              })}
             </div>
 
             {/* Footer Links */}
@@ -105,38 +130,10 @@ const Footer = () => {
             <p className="text-gray-500 text-sm">
               © {currentYear} Chester Frontline. All rights reserved.
             </p>
-            
+
             {/* Additional Info */}
             <div className="flex items-center gap-4 text-gray-500 text-sm">
               <span>Professional call center solutions</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Newsletter Section (Optional) */}
-      <div className="bg-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-2">
-                Stay updated with our latest insights
-              </h3>
-              <p className="text-gray-600 text-sm">
-                Get industry news and best practices delivered to your inbox.
-              </p>
-            </div>
-            
-            <div className="flex gap-3 w-full lg:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 lg:w-64 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-              />
-              <button className="bg-gray-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors duration-200 flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                Subscribe
-              </button>
             </div>
           </div>
         </div>

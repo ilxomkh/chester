@@ -146,13 +146,7 @@ const AboutUs = ({ scrollToSection }) => {
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
-                
-                <button 
-                  onClick={() => scrollToSection('booking')}
-                  className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-gray-600 text-gray-300 px-10 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:text-white hover:bg-gray-800 transition-all duration-200"
-                >
-                  Schedule a Call
-                </button>
+
               </div>
             </div>
           </div>

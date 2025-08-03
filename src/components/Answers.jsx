@@ -108,34 +108,6 @@ const Answers = ({ scrollToSection }) => {
             ))}
           </div>
         </div>
-
-        {/* Contact Section */}
-        <div className="text-center">
-          <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6">
-            Ready to get started?
-          </h3>
-          <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
-            Our team is ready to provide personalized solutions and help you understand 
-            how our services can benefit your business.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => scrollToSection('booking')}
-              className="group inline-flex items-center justify-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-200 hover:scale-105"
-            >
-              Contact Our Team
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-            </button>
-            
-            <button 
-              onClick={() => scrollToSection('booking')}
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:border-white/50 hover:bg-white/5 transition-all duration-200"
-            >
-              Schedule a Call
-            </button>
-          </div>
-        </div>
       </div>
 
       {/* Gradient Overlay */}

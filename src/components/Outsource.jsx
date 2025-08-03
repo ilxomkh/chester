@@ -54,9 +54,6 @@ const Outsource = ({ scrollToSection }) => {
 
   return (
     <section id="outsource" className="relative py-20 bg-gray-900">
-      <div className="absolute top-0 left-0 right-0 h-5 pointer-events-none shadow-2xl">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-gray-700 to-transparent backdrop-blur-sm"></div>
-      </div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="mb-16">
@@ -158,36 +155,6 @@ const Outsource = ({ scrollToSection }) => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to scale your operations?
-            </h3>
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Let's discuss how our outsourcing solutions can help you focus on what matters most 
-              while we handle your customer communications with excellence.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => scrollToSection('booking')}
-                className="group inline-flex items-center justify-center gap-3 bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-200 hover:scale-105"
-              >
-                Get Started Today
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
-              
-              <button 
-                onClick={() => scrollToSection('booking')}
-                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:border-white/50 hover:bg-white/5 transition-all duration-200"
-              >
-                View Case Studies
-              </button>
-            </div>
           </div>
         </div>
       </div>
