@@ -1,5 +1,6 @@
 import React from "react";
 import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Кастомная иконка X
 const XIcon = ({ size = 18 }) => (
@@ -50,9 +51,8 @@ const Footer = () => {
   ];
 
   const footerLinks = [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Privacy", href: "/privacy-policy" },
+    { name: "Terms", href: "/terms-of-service" },
   ];
 
   return (
@@ -112,13 +112,13 @@ const Footer = () => {
             {/* Footer Links */}
             <div className="flex items-center gap-6">
               {footerLinks.map((link, index) => (
-                <a
+                <Link
                   key={index}
-                  href={link.href}
+                  to={link.href}
                   className="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium text-sm"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

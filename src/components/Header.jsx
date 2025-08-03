@@ -43,9 +43,7 @@ const Header = ({ scrollToSection }) => {
   ];
 
   const supportItems = [
-    { icon: HelpCircle, title: "Help Center", desc: "Find answers and documentation" },
     { icon: MessageCircle, title: "Get in Touch", desc: "Contact our support team" },
-    { icon: BookOpen, title: "Resources", desc: "Access guides and tutorials" },
     { icon: Users2, title: "Community", desc: "Connect with other users" }
   ];
 
