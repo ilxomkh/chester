@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Кастомная иконка X
@@ -26,6 +26,12 @@ const Footer = () => {
       label: "Follow us on Instagram",
     },
     {
+      name: "Facebook",
+      icon: Facebook,
+      href: "https://www.facebook.com/profile.php?id=61579092538790",
+      label: "Connect with us on Facebook",
+    },
+    {
       name: "X",
       icon: XIcon,
       href: "https://x.com/ch_frontline?s=21",
@@ -42,10 +48,12 @@ const Footer = () => {
   const contactEmails = [
     {
       label: "General Inquiries",
+      icon: Mail,
       email: "info@chesterfrontline.com",
     },
     {
       label: "Support",
+      icon: Mail,
       email: "support@chesterfrontline.com",
     },
   ];
@@ -70,7 +78,7 @@ const Footer = () => {
                     href={`mailto:${contact.email}`}
                     className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium"
                   >
-                    {contact.email}
+                    <span className="flex items-center gap-2"> <Mail size={16} /> {contact.email}</span>
                   </a>
                 </div>
               ))}
